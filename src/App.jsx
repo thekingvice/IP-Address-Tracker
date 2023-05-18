@@ -6,10 +6,6 @@ function App() {
   const [ipAddress, setIpAddress] = useState("");
   const [coordinates, setCoordinates] = useState([51.505, -0.09]);
 
-  //get ip address, set ip address
-  //search for more info using ip address
-  //pass down courdinates to map and use it in map element
-
   //create search bar with default value of ip address
   //on submit check if valid ip address, if valid
 

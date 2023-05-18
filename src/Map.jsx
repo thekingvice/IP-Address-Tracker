@@ -10,11 +10,6 @@ export default function Map(props) {
     iconSize: ["46px", "56px"],
   });
 
-  const ChangeMap = () => {
-    const randcoord = [45.52345, -122.67621];
-    const map = useMap();
-    map.flyTo(randcoord);
-  };
 
   return (
     <>
@@ -24,7 +19,12 @@ export default function Map(props) {
         center={coordinates}
         zoom={12}
         scrollWheelZoom={false}
-      >
+      >(
+        const ChangeMap = () = {
+          const randcoord = [45.52345, -122.67621];
+          const map = useMap();
+          map.flyTo(randcoord);
+        };)
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
