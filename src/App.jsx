@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <button onClick={handleIP}>Handle IP:{ipAddress}</button>
       <button onClick={handleCoordinates}>Handle Coordinates</button>
-      <Map coordinates={coordinates}></Map>
+      <Map coordinates={coordinates} setCoordinates={setCoordinates}></Map>
     </div>
   );
 }
