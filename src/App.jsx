@@ -5,6 +5,7 @@ import Map from "./Map";
 function App() {
   const [coordinates, setCoordinates] = useState([51.505, -0.09]);
   const [ipAddress, setIpAddress] = useState("");
+  const [input, setInput] = useState("");
   const [ipData, setIpData] = useState({
     location: {
       region: "",
@@ -17,7 +18,7 @@ function App() {
     isp: "",
   });
 
-  function handleData() {
+  function handleData(ipAddress) {
     //set ip address to input value
     let coordinatesList = [];
     let ipDataObj = {
@@ -62,7 +63,7 @@ function App() {
 
   useEffect(() => {
     handleIP();
-  }, [ipAddress]);
+  }, []);
 
   function validateIPAddress(ipAddress) {
     // Regular expression pattern for IPv4 address
@@ -86,6 +87,10 @@ function App() {
     }
   }
 
+  const inputChange = (event) => {
+    setInput(event.target.value);
+  };
+
   return (
     <div className="App">
       <section className="App__search">
@@ -96,11 +101,16 @@ function App() {
             type="text"
             name="search"
             placeholder="Search for an IP Address"
+            value={input}
+            onChange={inputChange}
           />
           <button
             onClick={() => {
-              validateIPAddress(ipAddress);
+              // validateIPAddress(ipAddress);
+              // handleData();
+              setIpAddress(input);
               handleData();
+              console.log(ipAddress);
             }}
           >
             Submit
