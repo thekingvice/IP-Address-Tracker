@@ -1,38 +1,35 @@
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { useMap } from "react-leaflet";
 
+// Function to change the view of the map
 function ChangeView({ center, zoom }) {
   const map = useMap();
   map.setView(center, zoom);
   return null;
 }
 
+// Main Map component
 export default function Map(props) {
-  const { coordinates, setCoordinates } = props;
+  // Destructure coordinates from the props
+  const { coordinates } = props;
 
-  const testCoordinates = [22, 22];
-
+  // Create a custom icon for the marker
   const customIcon = new Icon({
     iconUrl: "/icon-location.svg",
     iconSize: ["46px", "56px"],
   });
 
+  // Initialize state for the map instance
   const [map, setMap] = useState(null);
 
-  // const onClickSet = useCallback(() => {
-  //   setCoordinates(testCoordinates);
-  //   map.setView(testCoordinates, 12);
-  // }, [map]);
-
+  // Render the MapContainer component with the specified coordinates
   return (
     <>
-      {/* <button onClick={onClickSet}>{`<button>SetMapView();</button>`}</button> */}
-
       <MapContainer
-        style={{ height: "50rem" }}
+        style={{ height: "30rem" }}
         center={coordinates}
         zoom={12}
         scrollWheelZoom={false}
@@ -48,3 +45,8 @@ export default function Map(props) {
     </>
   );
 }
+
+// const onClickSet = useCallback(() => {
+//   setCoordinates(testCoordinates);
+//   map.setView(testCoordinates, 12);
+// }, [map]);

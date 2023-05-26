@@ -1,0 +1,66 @@
+.App__search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  background-image: url(../public/pattern-bg-desktop.png);
+  background-size: cover;
+}
+
+.App__header {
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.App__searchbar-wrapper {
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.App__searchbar {
+  background: white;
+  padding: 0.5rem 1rem;
+  width: 20rem;
+}
+
+.App__searchbar:focus {
+  outline: none;
+  border: none;
+}
+
+.App__submit-button {
+  padding: 1rem;
+  background: black;
+}
+
+.App__submit-button:hover {
+  background: rgb(50, 50, 50);
+}
+
+.App__details {
+  display: flex;
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.App__details-p {
+  color: rgb(125, 125, 125);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.App__details-h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.App__details-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
