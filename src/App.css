@@ -24,7 +24,8 @@
 .App__searchbar {
   background: white;
   padding: 0.5rem 1rem;
-  width: 20rem;
+  max-width: 20rem;
+  width: 100%;
 }
 
 .App__searchbar:focus {
